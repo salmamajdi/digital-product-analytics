@@ -1,0 +1,30 @@
+# Raw and generated datasets
+data/raw/
+data/processed/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets / local environment
+.env
+*.env
+
+# Logs / temp
+*.log
+*.tmp
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# PostgreSQL / local exports
+*.csv
+*.dump
+*.backup
+
+# Keep the PBIX if it is under GitHub's file-size limit.
+# If it is too large, use Git LFS or publish screenshots/PDF instead.
