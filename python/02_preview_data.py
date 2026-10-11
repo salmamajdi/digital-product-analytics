@@ -1,7 +1,8 @@
 from pathlib import Path
 import pyarrow.parquet as pq
 
-DATA_DIR = Path(r"C:\digital-product-analytics\data\raw")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data" / "raw"
 
 for file in sorted(DATA_DIR.glob("*.parquet")):
     parquet_file = pq.ParquetFile(file)

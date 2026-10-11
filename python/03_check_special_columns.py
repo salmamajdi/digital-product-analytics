@@ -1,7 +1,8 @@
 from pathlib import Path
 import pyarrow.parquet as pq
 
-DATA_DIR = Path(r"C:\digital-product-analytics\data\raw")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data" / "raw"
 
 product_file = pq.ParquetFile(DATA_DIR / "product_properties.parquet")
 search_file = pq.ParquetFile(DATA_DIR / "search_query.parquet")

@@ -7,9 +7,8 @@ import pyarrow.parquet as pq
 import psycopg
 
 
-PARQUET_PATH = Path(
-    r"C:\digital-product-analytics\data\raw\product_properties.parquet"
-)
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PARQUET_PATH = PROJECT_ROOT / "data" / "raw" / "product_properties.parquet"
 
 password = getpass("Mot de passe PostgreSQL : ")
 

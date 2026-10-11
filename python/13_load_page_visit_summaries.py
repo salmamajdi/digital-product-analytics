@@ -6,7 +6,8 @@ import pyarrow.parquet as pq
 import psycopg
 
 
-DATA_DIR = Path(r"C:\digital-product-analytics\data\processed")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data" / "processed"
 
 TABLES = {
     "user_daily_activity.parquet": {

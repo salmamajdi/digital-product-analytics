@@ -1,8 +1,9 @@
 from pathlib import Path
 import duckdb
 
-DATA_DIR = Path(r"C:\digital-product-analytics\data\raw")
-OUTPUT_DIR = Path(r"C:\digital-product-analytics\data\processed")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data" / "raw"
+OUTPUT_DIR = PROJECT_ROOT / "data" / "processed"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
